@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Time — Venice Muscle Beach</title>
+  <meta name="description" content="High-performance group calisthenics at Venice Muscle Beach. Reserve your spot. Max 2 per session. No egos. Pure grit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <video autoplay muted loop playsinline id="hero-video">
+      <source src="20260305_0724_01kjz9g4gxfkpvv42hr1m0mj54.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img
+        src="Mens_program_time_fresh_out_of_lockup_and_stright__delpmaspu.png"
+        alt="Program Time"
+        class="hero-logo"
+      >
+      <h1>PROGRAM TIME</h1>
+      <p class="hero-tagline">VENICE MUSCLE BEACH &middot; NO EGOS. PURE GRIT.</p>
+      <a href="#reserve" class="hero-cta">RESERVE YOUR SPOT</a>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about">
+    <div class="container">
+      <h2>WHAT IS PROGRAM TIME?</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">Located at the iconic Venice Muscle Beach, this is a high-performance group session for men of action.</p>
+          <p>No equipment brought in. No egos allowed. Just public bars and pure grit. We operate under a strict <strong>&ldquo;Serious Mode&rdquo;</strong> protocol.</p>
+          <p class="about-warning">If you commit, you show up.</p>
+        </div>
+        <div class="about-rules">
+          <div class="rule-card">
+            <span class="rule-icon">&#9878;</span>
+            <span>PUBLIC BARS ONLY</span>
+          </div>
+          <div class="rule-card">
+            <span class="rule-icon">&#9760;</span>
+            <span>NO EGOS ALLOWED</span>
+          </div>
+          <div class="rule-card">
+            <span class="rule-icon">&#10003;</span>
+            <span>COMMIT OR DON&rsquo;T COME</span>
+          </div>
+          <div class="rule-card">
+            <span class="rule-icon">&#9733;</span>
+            <span>SERIOUS MODE ONLY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESERVE ========== -->
+  <section id="reserve">
+    <div class="container">
+      <h2>LOCK IN YOUR SPOT</h2>
+      <p class="reserve-subtitle">2 spots per session. Every day. Don&rsquo;t sleep on it.</p>
+
+      <div class="date-picker-row">
+        <label for="session-date">SELECT DATE</label>
+        <input type="date" id="session-date">
+      </div>
+
+      <div class="cards-row">
+        <!-- Morning Card -->
+        <div class="session-card" id="card-morning">
+          <div class="card-front">
+            <div class="card-badge">AM</div>
+            <h3>MORNING SESSION</h3>
+            <div class="spots-display">
+              <span class="spots-count" id="spots-morning">—</span>
+              <span class="spots-label">/ 2 SPOTS LEFT</span>
+            </div>
+            <div class="card-form" id="form-morning">
+              <input type="text" placeholder="YOUR NAME" class="input-name" maxlength="60" required>
+              <input type="text" placeholder="PHONE OR IG HANDLE" class="input-contact" maxlength="60" required>
+              <button class="btn-lock" data-section="morning">LOCK IN</button>
+            </div>
+            <div class="card-full hidden" id="full-morning">
+              <span class="full-icon">&#10005;</span>
+              <span>SESSION FULL</span>
+            </div>
+          </div>
+          <div class="card-confirm hidden" id="confirm-morning">
+            <span class="confirm-icon">&#10003;</span>
+            <h3>YOU&rsquo;RE LOCKED IN</h3>
+            <p>Show up. No excuses.</p>
+          </div>
+        </div>
+
+        <!-- Afternoon Card -->
+        <div class="session-card" id="card-afternoon">
+          <div class="card-front">
+            <div class="card-badge">PM</div>
+            <h3>AFTERNOON SESSION</h3>
+            <div class="spots-display">
+              <span class="spots-count" id="spots-afternoon">—</span>
+              <span class="spots-label">/ 2 SPOTS LEFT</span>
+            </div>
+            <div class="card-form" id="form-afternoon">
+              <input type="text" placeholder="YOUR NAME" class="input-name" maxlength="60" required>
+              <input type="text" placeholder="PHONE OR IG HANDLE" class="input-contact" maxlength="60" required>
+              <button class="btn-lock" data-section="afternoon">LOCK IN</button>
+            </div>
+            <div class="card-full hidden" id="full-afternoon">
+              <span class="full-icon">&#10005;</span>
+              <span>SESSION FULL</span>
+            </div>
+          </div>
+          <div class="card-confirm hidden" id="confirm-afternoon">
+            <span class="confirm-icon">&#10003;</span>
+            <h3>YOU&rsquo;RE LOCKED IN</h3>
+            <p>Show up. No excuses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <p class="footer-location">&#128205; Venice Muscle Beach, Los Angeles CA</p>
+      <p class="footer-motto">&ldquo;Show up or don&rsquo;t sign up.&rdquo;</p>
+      <p class="footer-copy">&copy; 2026 Program Time</p>
+    </div>
+  </footer>
+
+  <!-- Appwrite SDK (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@16.1.0/dist/appwrite.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
